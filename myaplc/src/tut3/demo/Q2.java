@@ -1,4 +1,4 @@
-package tut2.source;
+package tut3.demo;
 
 import java.util.List;
 import java.util.stream.Stream;
