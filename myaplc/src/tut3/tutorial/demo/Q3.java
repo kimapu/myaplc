@@ -1,4 +1,4 @@
-package tut3.demo;
+package tut3.tutorial.demo;
 
 import java.util.*;
 import java.util.stream.Collectors;
