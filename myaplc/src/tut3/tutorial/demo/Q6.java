@@ -31,7 +31,7 @@ public class Q6 {
 //		Stream<Integer> newList = Stream.iterate(min, n -> n <= max, n -> n + 2);
 		
 		//Alternatively,
-		Stream<Integer> newList = Stream.iterate(min, n -> n + 2); //infinate loop...
+		Stream<Integer> newList = Stream.iterate(min, n -> n + 2); //causes infinate loop...
 		Stream<Integer> collect10 = newList.limit(10); 
 		
 		collect10.forEach(System.out::println);
