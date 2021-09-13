@@ -34,10 +34,12 @@ public class Demo {
 	//functional coding...
 	static List<Pair> createPair( List<String> col, String delimiter ){
 		return col.stream()
-			.map( rec -> {
-				String[] token = rec.split("\\"+ delimiter);
-				return Pair.with( token[0], Integer.parseInt( token[1] ));
-			} )
+//			.map( rec -> {
+//				String[] token = rec.split("\\"+ delimiter);
+//				return Pair.with( token[0], Integer.parseInt( token[1] ));
+//			})
+			//alternatively,
+			.map( rec -> Pair.fromCollection( Arrays.asList( rec.split("\\"+ delimiter) ) ))
 			.collect( Collectors.toCollection(ArrayList::new) );
 	}
 	
