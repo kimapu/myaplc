@@ -19,6 +19,8 @@ public class Q4 {
 		
 		//q.test();
 		
+		Collections.sort( Data.list );
+		
 	}
 	
 	//prior to java 9 - Factory API List.of()
@@ -54,6 +56,4 @@ public class Q4 {
 		return col.stream().sorted().collect(Collectors.toCollection(ArrayList::new));
 	}
 	
-
-
 }

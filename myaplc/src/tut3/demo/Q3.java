@@ -18,8 +18,8 @@ public class Q3 {
 		//.map & .collect	
 		return col.stream()
 				.map( elem -> elem * n ) //transform elem to new elem
-				//.collect( Collectors.toCollection(ArrayList::new) ); //construtor reference
-				.collect( Collectors.toList() );
+				.collect( Collectors.toCollection(ArrayList::new) ); //constructor reference
+				//.collect( Collectors.toList() );
 		
 	}
 
