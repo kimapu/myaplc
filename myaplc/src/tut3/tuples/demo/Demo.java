@@ -1,7 +1,9 @@
 package tut3.tuples.demo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.javatuples.Pair;
 
@@ -18,12 +20,31 @@ public class Demo {
 	//TASK-1: write a function that creates a group of pair 
 		//according to the recordLst object.
 	
+	//chonyonglin; chongweihan;
+	//imperative coding...
+	static List<Pair> createPair( List<String> col ) {
+		List<Pair> pairLst = new ArrayList<>();
+		for (String rec : col) {
+			String[] token = rec.split("\\,");
+			pairLst.add( Pair.with( token[0], token[1]) );
+		}
+		return pairLst;
+	}
+	
+	//functional coding...
+	static List<Pair> createPair( List<String> col, String delimiter ){
+		return col.stream()
+			.map( rec -> {
+				String[] token = rec.split("\\"+ delimiter);
+				return Pair.with( token[0], token[1]);
+			} )
+			.collect( Collectors.toCollection(ArrayList::new) );
+	}
+	
 	public static void main(String[] args) {
 
-		Pair<String, String> pair1 = Pair.with( "Bruce" , "TP123456" );
-		
-		
-		System.out.println( pair1 );
+		List<Pair> pairs = createPair( recordLst, "," );
+		System.out.println( pairs );
 	}
 
 }
