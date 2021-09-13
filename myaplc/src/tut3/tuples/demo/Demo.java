@@ -11,10 +11,10 @@ public class Demo {
 
 	//data-collection
 	static List<String> recordLst = Arrays.asList(
-			"Bruce,TP123456",
-			"Dory,TP987654",
-			"Gill,TP654321",
-			"Mary,TP919191"
+			"Bruce,123456",
+			"Dory,987654",
+			"Gill,654321",
+			"Mary,919191"
 			);
 	
 	//TASK-1: write a function that creates a group of pair 
@@ -36,7 +36,7 @@ public class Demo {
 		return col.stream()
 			.map( rec -> {
 				String[] token = rec.split("\\"+ delimiter);
-				return Pair.with( token[0], token[1]);
+				return Pair.with( token[0], Integer.parseInt( token[1] ));
 			} )
 			.collect( Collectors.toCollection(ArrayList::new) );
 	}
