@@ -61,7 +61,7 @@ public class Demo {
 	//q7-referential transparency issue
 	int add(int a, int b) { //pure function? Yes.  However, the function has a side effect so impure.
 	    int result = a + b;
-	    System.out.println("Returning " + result); //introduces side effect...
+	    //System.out.println("Returning " + result); //introduces side effect...
 	    return result;
 	}
 
@@ -69,8 +69,8 @@ public class Demo {
 	//formula: result = (a+b) * (c+d)
 	int f( int a, int b, int c, int d) 
 	{
-		return (a+b) * (c+d);
-		//return add(a, b) * add(c, d);
+		//return (a+b) * (c+d);
+		return (a+b) * add(c, d);
 	}
 	
 	
