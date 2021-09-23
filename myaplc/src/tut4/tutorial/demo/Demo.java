@@ -7,16 +7,37 @@ public class Demo {
 		//able to guarantee the consistent output...!
 	
 	//plus(int, int) : int
-	int plus(int i, int j) { //pure function?
+	int plus(int i, int j) { //pure function? Yes.
 		return i + j;
+	}
+	
+	//bad example
+	private class Multipler{
+		
+		int multiplier = 2;
+		
+		//mul(double) : double
+		double mul( double d ) //side effect is being observed becos the external access.
+		{
+			return d * multiplier;
+		}
+				
 	}
 	
 	public static void main(String[] args) {
 		
 		Demo demo = new Demo();
-//		int r1 = d.add(10, 20); //30
-//		int r2 = d.add(10, 20); //30
-//		int r3 = d.add(10, 20); //30
+		
+		Multipler mulpr = demo.new Multipler();
+		
+//		System.out.println( mulpr.mul(2) ); //4
+//		mulpr.multiplier = 3;
+//		System.out.println( mulpr.mul(2) ); //6
+		
+		
+//		int r1 = demo.plus(10, 20); //30
+//		int r2 = demo.plus(10, 20); //30
+//		int r3 = demo.plus(10, 20); //30
 		
 //		System.out.println( Math.random() );
 //		System.out.println( Math.random() );
@@ -31,12 +52,14 @@ public class Demo {
 			Returning 70
 			2100
 		 */
-		
+//		System.out.println( demo.add(10, 30) );
+//		System.out.println( demo.add(10, 30) );
+//		System.out.println( demo.add(10, 30) );
 	}
 	
 	
 	//q7-referential transparency issue
-	int add(int a, int b) { //pure function? Yes. However, the function has a side effect so impure.
+	int add(int a, int b) { //pure function? Yes.  However, the function has a side effect so impure.
 	    int result = a + b;
 	    System.out.println("Returning " + result); //introduces side effect...
 	    return result;
@@ -46,23 +69,12 @@ public class Demo {
 	//formula: result = (a+b) * (c+d)
 	int f( int a, int b, int c, int d) 
 	{
-//		return (a+b) * (c+d);
-		return (a+b) * add(c, d);
+		return (a+b) * (c+d);
+		//return add(a, b) * add(c, d);
 	}
 	
 	
-	//bad example
-	private class Multipler{
-		
-		int multiplier = 2;
-		
-		//mul(double) : double
-		double mul( double d ) //side effect is being observed becos the external access.
-		{
-			return d * multiplier;
-		}
-		
-	}
+	
 	
 	
 }
