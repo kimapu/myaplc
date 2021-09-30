@@ -14,13 +14,36 @@ public class Demo {
 				//in turn returning result by value/object
 	
 	//q2() -> kaijun
-	private Predicate<String> checkSalleh = name -> name.equals("salleh");
+	public Predicate<String> checkSalleh = name -> name.equals("salleh"); //Function as value
+	public Predicate<String> checkAli = name -> name.equals("ali");
+	
 	String q2( List<String> username ) {
 		return username.stream()
 				.filter( checkSalleh :: test ) //method-reference = FunctionAsArgument
 				//.findFirst()
 				.findAny()
 				.orElse(null);
+	}
+	
+	String q2_updated( List<String> username, Predicate<String> condition ) {
+		return username.stream()
+				.filter( condition ) 
+				.findAny()
+				.orElse(null);
+	}
+	
+	String q2_copy( List<String> username ) { //imperative-style
+		for (String elem : username) { 
+			if( elem.equals("salleh") ) //filter by test the condition 
+			{
+				return elem;
+			}
+			else 
+			{
+				return null;
+			}
+		}
+		return null;
 	}
 	
 	//q3() -> jason
@@ -30,7 +53,10 @@ public class Demo {
 	}
 	
 	//q4() -> jason
-	BiFunction<Integer, Integer[], Integer> total = (x, a) -> x * Arrays.stream(a).mapToInt(Integer::intValue).sum();
+	BiFunction<Integer, Integer[], Integer> total = (x, a) -> 
+		x * Arrays.stream(a)
+			.mapToInt(Integer :: intValue) //transform the Integer obj typed to the primitive typed stream (IntStream)
+			.sum();
 	int q4( int x, Integer[] a ) {
 		return total.apply( x, a );
 	}
@@ -43,9 +69,9 @@ public class Demo {
 	
 	//q5() -> bryan
 	//f(20, 15) = 20 + 15
-	BiFunction<Integer, Integer, Integer> f = (a, b)-> a + b; 
+	BiFunction<Integer, Integer, Integer> f = (a, b)-> a + b; //yet curried function 
 	
-	Function<Integer, Function<Integer, Integer>> add = a -> b -> a + b; //curried function! partial-app
+	Function<Integer, Function<Integer, Integer>> add = a -> (b -> a + b); //curried function! partial-app
 	Function<Integer, Integer> q5a( int a ) {
 		return add.apply(a);//partially executed the function add()
 	}

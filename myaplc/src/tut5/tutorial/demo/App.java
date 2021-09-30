@@ -13,7 +13,8 @@ public class App {
 		Demo demo = new Demo();
 		
 		//q2( List<String> username )
-		String result = demo.q2(username);
+		//String result = demo.q2(username);
+		String result = demo.q2_updated(username, demo.checkSalleh );
 		System.out.println( result );
 		
 	}
