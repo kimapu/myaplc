@@ -22,7 +22,7 @@ public class Q9 {
 		Path filePath = Paths.get( fileName );
 		int sum = Files.readAllLines(filePath)
 				.stream()
-				.mapToInt(Integer::parseInt)
+				.mapToInt(Integer::parseInt) //convert to IntStream
 				.sum();
 		System.out.println( "Sum: "+ sum );
 	}
@@ -31,9 +31,9 @@ public class Q9 {
 	static void m1( String fileName ) throws Exception{
 		int sum = Files.readAllLines( Paths.get( fileName ))
 			.stream()
-			.map(Integer::parseInt)
-			//.reduce(0, Integer::sum);
-			.reduce(0, (e1, e2) -> e1 + e2);
+			.map(Integer::parseInt) //convert to the primitive int
+			.reduce(0, Integer::sum);
+			//.reduce(0, (e1, e2) -> e1 + e2);
 		System.out.println( "Sum: "+ sum );
 	}
 	
