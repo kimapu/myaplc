@@ -2,6 +2,7 @@ package tut8.tutorial.q2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Demo {
 
@@ -10,8 +11,12 @@ public class Demo {
 		
 		List<Student> studentLst = getStudents();
 		
-		Coursework.compute(studentLst)
-			.forEach( e -> System.out.println(Math.round(e)) );
+		/**
+		 * NullPointerException is concerned so Optional is a trick!
+		 */
+		Optional.ofNullable( Coursework.compute(studentLst) ).ifPresentOrElse(
+				elem -> elem.forEach( e -> System.out.println(Math.round(e)) ), 
+				() -> System.out.println("No marks!") );
 		
 	}
 	

@@ -25,7 +25,6 @@ public class Coursework {
 								.mapToDouble(Number::doubleValue)
 								.sum())
 					.collect( Collectors.toCollection( ArrayList :: new ) );
-					
 		} else {
 			return null;
 		}
