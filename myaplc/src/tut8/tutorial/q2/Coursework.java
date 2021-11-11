@@ -2,6 +2,7 @@ package tut8.tutorial.q2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -29,6 +30,17 @@ public class Coursework {
 			return null;
 		}
 		
+	}
+	
+	public static Optional<List<Double>> compute2( List<Student> studentLst ) {
+		return Optional.of(
+					studentLst.stream()
+					.map(student -> Stream.of( student.getMarks() )
+								.map( m -> mul25.apply(m) )
+								.mapToDouble(Number::doubleValue)
+								.sum())
+					.collect( Collectors.toCollection( ArrayList :: new ) )
+				);
 	}
 	
 }

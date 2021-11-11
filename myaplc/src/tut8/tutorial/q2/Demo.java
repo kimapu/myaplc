@@ -14,9 +14,23 @@ public class Demo {
 		/**
 		 * NullPointerException is concerned so Optional is a trick!
 		 */
-		Optional.ofNullable( Coursework.compute(studentLst) ).ifPresentOrElse(
+//		Optional.ofNullable( Coursework.compute(studentLst) ).ifPresentOrElse(
+//				elem -> elem.forEach( e -> System.out.println(Math.round(e)) ), 
+//				() -> System.out.println("No marks!") );
+		
+		Coursework.compute2( studentLst ).ifPresentOrElse(
 				elem -> elem.forEach( e -> System.out.println(Math.round(e)) ), 
-				() -> System.out.println("No marks!") );
+				() -> System.out.println("No marks!")
+				);
+		
+		//alternatively, 
+//		List<Double> ml = null;
+		//1)
+//		if( ml != null ) {
+//			ml.forEach( e -> System.out.println(Math.round(e)) );
+//		}
+		//2)
+		//Optional.ofNullable(ml).ifPresent( elem -> elem.forEach( e -> System.out.println(Math.round(e)) ) );
 		
 	}
 	
