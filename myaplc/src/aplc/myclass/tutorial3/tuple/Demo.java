@@ -7,6 +7,16 @@ import java.util.stream.Collectors;
 
 import org.javatuples.Pair;
 
+/**
+ *  This demo requires javatuple api so download the javatuple from
+ *  https://www.javatuples.org/download.html
+ *  
+ *  and the, add the javatuples-1.2.jar into the project
+ *  In Eclipse, right-click the Project context -> Build Path -> Configure Build Path -> 
+ *  	Libraries tab ->  Add External Jar -> select the jar -> Apply and close.
+ *
+ */
+
 public class Demo {
 
 	//data-collection
