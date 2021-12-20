@@ -1,4 +1,4 @@
-package tut3.tuples.demo;
+package aplc.myclass.tutorial3.tuple;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +20,6 @@ public class Demo {
 	//TASK-1: write a function that creates a group of pair 
 		//according to the recordLst object.
 	
-	//chonyonglin; chongweihan;
 	//imperative coding...
 	static List<Pair> createPair( List<String> col ) {
 		List<Pair> pairLst = new ArrayList<>();
