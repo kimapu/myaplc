@@ -1,4 +1,4 @@
-package tut3.tutorial.demo;
+package aplc.archive.tut3.tutorial.demo;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;

@@ -1,4 +1,4 @@
-package tut4.tutorial.demo;
+package aplc.archive.tut4.tutorial.demo;
 
 public class Demo {
 

@@ -13,7 +13,7 @@ import org.javatuples.Pair;
  *  
  *  and the, add the javatuples-1.2.jar into the project
  *  In Eclipse, right-click the Project context -> Build Path -> Configure Build Path -> 
- *  	Libraries tab ->  Add External Jar -> select the jar -> Apply and close.
+ *  	Libraries tab -> select ClassPath -> Add External Jar -> select the jar -> Apply and close.
  *
  */
 

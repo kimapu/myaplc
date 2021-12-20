@@ -1,4 +1,4 @@
-package tut1.demo;
+package aplc.archive.tut1.demo;
 
 import java.util.function.Function;
 
