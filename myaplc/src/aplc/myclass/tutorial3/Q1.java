@@ -22,9 +22,9 @@ public class Q1 {
 	//functional coding
 	void fun(){
 		int[] numLst = Data.arr;
-		//stream of elements - stream()
-		//IntStream stream = Arrays.stream(numLst);
-		//stream.forEach( System.out :: println ); //method-reference
+		//stream of elements - stream() - container
+//		IntStream stream = Arrays.stream(numLst);
+//		stream.forEach( System.out :: println ); //method-reference
 		//shorthand, 
 		Arrays.stream(numLst).forEach( elem -> System.out.print( elem + " " ) ); //lambda-expr
 		
