@@ -16,8 +16,11 @@ public class Demo {
 	 * In FP, we rewrite the function
 	 */
 	public static String find( List<String> names ) { //pure function
-		return names.stream().filter( name -> name.equals("Nemo") ).findAny().orElse(null);
+		return names.stream() //for iteration
+				.filter( name -> name.equals("Nemo") ) //lambda
+				.findAny().orElse(null);
 	}
+	
 	/**
 	 * Imperative coding...
 	 */
