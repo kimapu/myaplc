@@ -1,7 +1,7 @@
 package aplc.myclass.tutorial4.purity;
 
 public class Demo {
-
+ 
 	// purity concept in programming
 		// concerns with the function that we made
 		// able to guarantee the consistent output...!
