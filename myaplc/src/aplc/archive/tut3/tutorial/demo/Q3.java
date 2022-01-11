@@ -18,9 +18,16 @@ public class Q3 {
 		//.map & .collect	
 		return col.stream()
 				.map( elem -> elem * n ) //transform elem to new elem
-				.collect( Collectors.toCollection(ArrayList::new) ); //constructor reference
+				.collect( Collectors.toCollection(ArrayList :: new) ); //constructor reference
 				//.collect( Collectors.toList() );
-		
 	}
-
+	
+	List<Integer> fun( int[] col, int n) {
+		//.map & .collect	
+		return Arrays.stream( col )
+				.map( elem -> elem * n ) //transform elem to new elem
+				.mapToObj( Integer :: valueOf )
+				.collect( Collectors.toCollection(ArrayList :: new) ); //constructor reference
+	}
+	
 }
