@@ -23,8 +23,8 @@ public class Q5 {
 	
 	List<Integer> fun( int[] arr  ){
 		return Arrays.stream( arr )
-				.sorted()
-				.mapToObj( Integer :: valueOf )
+				.boxed()
+				.sorted( Comparator.reverseOrder() )
 				.collect( Collectors.toList() );
 	}
 }
