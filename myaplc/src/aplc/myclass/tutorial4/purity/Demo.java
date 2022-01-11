@@ -30,9 +30,9 @@ public class Demo {
 
 		Multipler mulpr = demo.new Multipler();
 
-//		System.out.println( mulpr.mul(2) ); //4
-//		mulpr.multiplier = 3;
-//		System.out.println( mulpr.mul(2) ); //6
+		System.out.println( mulpr.mul(2) ); //4
+		mulpr.multiplier = 3;
+		System.out.println( mulpr.mul(2) ); //6
 
 //		int r1 = demo.plus(10, 20); //30
 //		int r2 = demo.plus(10, 20); //30
