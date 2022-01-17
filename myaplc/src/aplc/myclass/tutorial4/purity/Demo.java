@@ -27,20 +27,20 @@ public class Demo {
 	public static void main(String[] args) {
 
 		Demo demo = new Demo();
-
-		Multipler mulpr = demo.new Multipler();
-
-		System.out.println( mulpr.mul(2) ); //4
-		mulpr.multiplier = 3;
-		System.out.println( mulpr.mul(2) ); //6
-
+//
+//		Multipler mulpr = demo.new Multipler();
+//
+//		System.out.println( mulpr.mul(2) ); //4
+//		mulpr.multiplier = 3;
+//		System.out.println( mulpr.mul(2) ); //6
+//
 //		int r1 = demo.plus(10, 20); //30
 //		int r2 = demo.plus(10, 20); //30
 //		int r3 = demo.plus(10, 20); //30
 
-//		System.out.println( Math.random() );
-//		System.out.println( Math.random() );
-//		System.out.println( Math.random() );
+		System.out.println( Math.random() );
+		System.out.println( Math.random() );
+		System.out.println( Math.random() );
 
 		
 	}

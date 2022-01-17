@@ -1,5 +1,7 @@
 package aplc.myclass.tutorial4.purity;
 
+import javax.swing.JOptionPane;
+
 /**
  * 
  * @author kimlee@staffemail.apu.edu.my
@@ -21,8 +23,8 @@ public class Q7 {
 	// in this situation, we may make a function that utilise existing function.
 	// formula: result = (a+b) * (c+d)
 	int f(int a, int b, int c, int d) {
-		//return (a+b) * (c+d);
-		return (a + b) * add(c, d);
+		return (a+b) * (c+d);
+		//return (a + b) * add(c, d);
 	}
 
 	void test() {
@@ -30,7 +32,7 @@ public class Q7 {
 		// trying q7
 		int a = 10, b = 20, c = 30, d = 40;
 
-		 System.out.println( new Q7().f(a, b, c, d));
+		System.out.println( new Q7().f(a, b, c, d));
 		/**
 		 * Returning 30 Returning 70 2100
 		 */
