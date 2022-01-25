@@ -20,9 +20,8 @@ public class Demo {
 		return function.apply(param);
 	}
 
-	Integer getValue( Function<Integer, Integer> function, String param ) {
-		//return function.apply(param);
-		return 0;
+	Integer getValue( Function<String, Integer> function, String param ) {
+		return function.apply(param);
 	}
 	
 	public static void main(String[] args) {
