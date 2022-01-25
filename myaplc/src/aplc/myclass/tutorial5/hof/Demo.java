@@ -19,6 +19,10 @@ public class Demo {
 	Integer get( Function<Integer, Integer> function, int param ) {
 		return function.apply(param);
 	}
+	
+	Integer get( Function<Integer, Integer> function1, Function<String, Integer> function2, String param ) {
+		return function1.apply( function2.apply(param) );
+	}
 
 	Integer getValue( Function<String, Integer> function, String param ) {
 		return function.apply(param);
@@ -34,10 +38,12 @@ public class Demo {
 		int r3 = dm.get(dm.div2, i2);
 		
 		int intValue = dm.getValue( Integer :: valueOf, "100"); //method-ref
+		int r4 = dm.get(dm.div2, Integer :: valueOf, "100");
 		
 		System.out.println( r1 );
 		System.out.println( r2 );
-		System.out.println( r3 );	
+		System.out.println( r3 );
+		System.out.println( r4 );	
 	}
 	
 }
