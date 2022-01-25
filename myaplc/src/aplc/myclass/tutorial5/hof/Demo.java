@@ -20,6 +20,11 @@ public class Demo {
 		return function.apply(param);
 	}
 
+	Integer getValue( Function<Integer, Integer> function, String param ) {
+		//return function.apply(param);
+		return 0;
+	}
+	
 	public static void main(String[] args) {
 		Demo dm = new Demo();
 		
@@ -29,11 +34,11 @@ public class Demo {
 		int r2 = dm.get(dm.doubler, i2);
 		int r3 = dm.get(dm.div2, i2);
 		
+		int intValue = dm.getValue( Integer :: valueOf, "100"); //method-ref
+		
 		System.out.println( r1 );
 		System.out.println( r2 );
-		System.out.println( r3 );
-		
-		
+		System.out.println( r3 );	
 	}
 	
 }
