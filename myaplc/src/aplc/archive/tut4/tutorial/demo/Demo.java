@@ -69,8 +69,8 @@ public class Demo {
 	//formula: result = (a+b) * (c+d)
 	int f( int a, int b, int c, int d) 
 	{
-		//return (a+b) * (c+d);
-		return (a+b) * add(c, d);
+		//return (a+b) * add(c, d);
+		return add(a, b) * add(c, d);
 	}
 	
 	

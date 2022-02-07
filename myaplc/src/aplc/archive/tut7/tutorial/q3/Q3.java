@@ -1,4 +1,4 @@
-package tut7.tutorial.q3;
+package aplc.archive.tut7.tutorial.q3;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

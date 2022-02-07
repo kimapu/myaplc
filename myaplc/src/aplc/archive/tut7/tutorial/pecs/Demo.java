@@ -1,4 +1,4 @@
-package tut7.tutorial.pecs;
+package aplc.archive.tut7.tutorial.pecs;
 
 import java.util.ArrayList;
 import java.util.List;

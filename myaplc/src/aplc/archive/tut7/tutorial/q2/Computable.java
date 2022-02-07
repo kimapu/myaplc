@@ -1,4 +1,4 @@
-package tut7.tutorial.q2;
+package aplc.archive.tut7.tutorial.q2;
 
 public interface Computable<T, R>{
 	R add(T i1, T i2);

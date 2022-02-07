@@ -1,4 +1,4 @@
-package tut7.tutorial.q4;
+package aplc.archive.tut7.tutorial.q4;
 
 public abstract class Statistic<T extends Number>{
 	T[] nums;

@@ -1,4 +1,4 @@
-package tut7.tutorial.q2;
+package aplc.archive.tut7.tutorial.q2;
 
 public class FinancialCalc implements Computable<Double, Double>{
 

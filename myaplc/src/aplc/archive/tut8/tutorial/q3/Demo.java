@@ -1,4 +1,4 @@
-package tut8.tutorial.q3;
+package aplc.archive.tut8.tutorial.q3;
 
 import java.util.ArrayList;
 import java.util.Arrays;

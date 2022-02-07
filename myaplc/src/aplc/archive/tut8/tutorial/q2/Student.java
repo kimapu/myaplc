@@ -1,4 +1,4 @@
-package tut8.tutorial.q2;
+package aplc.archive.tut8.tutorial.q2;
 
 public class Student{
 	Integer marks[] = new Integer[4];
