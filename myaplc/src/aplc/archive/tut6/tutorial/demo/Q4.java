@@ -1,4 +1,4 @@
-package tut6.tutorial.demo;
+package aplc.archive.tut6.tutorial.demo;
 
 import java.util.function.UnaryOperator;
 
