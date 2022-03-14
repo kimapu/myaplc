@@ -21,7 +21,7 @@ public class Demo {
 			Query q1 = new Query("male(Who)");
 			System.out.println( "\n>> The following are the male: " );
 			Map<String, Term> sol = q1.oneSolution();
-			System.out.println( "\n>>Name: "+ sol.get("Who") );
+			System.out.println( ">>Name: "+ sol.get("Who") );
 			
 			//multiple-solution 
 			Query q2 = new Query("rich(Who)");
